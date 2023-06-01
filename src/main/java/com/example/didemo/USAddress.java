@@ -1,5 +1,9 @@
 package com.example.didemo;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+
 public class USAddress implements IAddress{
 
     private String city = "boston";
