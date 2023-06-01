@@ -12,6 +12,7 @@ public class USAddress implements IAddress{
         this.city = city;
     }
 
+    @Override
     public String getAddressInfo() {
         return city;
     }
