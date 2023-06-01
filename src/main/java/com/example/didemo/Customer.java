@@ -13,7 +13,9 @@ public class Customer {
     //   but closed for modification" design principle
 
     // - I want this Customer class to be able to
-    //   handle any kind of Address
+    //   handle any kind of Address without being forced
+    //   to change - I cannot do that without refactoring
+    //   this code to use DI
 //    public Customer() {
 //        this.USAddress = new USAddress();
 //    }
