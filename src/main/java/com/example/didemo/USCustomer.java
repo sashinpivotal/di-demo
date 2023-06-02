@@ -1,9 +1,11 @@
 package com.example.didemo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Customer {
+public class USCustomer implements ICustomer{
 
     private String name = "sang";
     private IAddress address;
@@ -28,7 +30,9 @@ public class Customer {
     //   constructor in an abstract form
     // - Open Close principle is observed
     // - this is actually an example Strategy design pattern
-    public Customer(IAddress address) {
+    @Autowired
+    public USCustomer(@Qualifier("us") IAddress address) {
+
         this.address = address;
     }
 
@@ -40,8 +44,18 @@ public class Customer {
         this.address = address;
     }
 
+
+
     @Override
     public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", address=" + address.getAddressInfo() +
+                '}';
+    }
+
+    @Override
+    public String getCustomerInfo() {
         return "Customer{" +
                 "name='" + name + '\'' +
                 ", address=" + address.getAddressInfo() +

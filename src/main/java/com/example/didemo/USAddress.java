@@ -3,7 +3,7 @@ package com.example.didemo;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-
+@Component("us")
 public class USAddress implements IAddress{
 
     private String city = "boston";

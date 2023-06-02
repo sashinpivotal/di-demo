@@ -7,16 +7,16 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 public class MyConfiguration {
 //    @Bean
-//    public Customer customer(IAddress address) {
-//        return new Customer(address);
+//    public ICustomer customer(IAddress address) {
+//        return new USCustomer(address);
 //    }
 //
 //    @Bean
 //    public IAddress us_address() {
 //        return new USAddress();
 //    }
-
-
+//
+//
 //    @Bean
 //    @Primary
 //    public IAddress international_address() {

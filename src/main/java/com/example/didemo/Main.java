@@ -3,12 +3,12 @@ package com.example.didemo;
 public class Main {
     public static void main(String[] args) {
         USAddress usAddress = new USAddress();
-        Customer customer = new Customer(usAddress);
+        USCustomer customer = new USCustomer(usAddress);
         System.out.println(customer);
 
         InternationalAddress internationalAddress
                 = new InternationalAddress();
-        Customer customer1 = new Customer(internationalAddress);
+        USCustomer customer1 = new USCustomer(internationalAddress);
         System.out.println(customer1);
     }
 }
